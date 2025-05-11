@@ -13,6 +13,7 @@ body {
   overflow: hidden;
 }
 
+/* Cabeçalho */
 header {
   position: fixed;
   top: 0;
@@ -20,13 +21,139 @@ header {
   justify-content: space-between;
   background-color: #3800799c;
   display: flex;
-  padding: 20px 50px;
+  padding: 25px 50px;
   align-items: center;
   z-index: 3;
 }
 
+/* Logo cabeçalho */
 .logo {
   font-size: 2rem;
   font-weight: 1000;
   color: #ffffff;
+  text-shadow: #ffe600 0px 0px 10px;
+  padding-left: 50px;
+}
+
+/* Separa grupo de itens Início, Produtos e Contato */
+header nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+/* Personalização adicional para itens Início, Produtos e Contato */
+header nav ul li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  /* A posição é relacionada aos itens do cabe */
+  position: relative;
+}
+
+/* Efeito de sublinhado animado no cabeçalho */
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ffe600;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Até onde vai o efeito de sublinhado animado no cabeçalho */
+header nav ul li:hover::after {
+  width: 100%;
+}
+
+/* Efeitos no container */
+.container {
+  height: 100vh;
+  position: relative;
+  background: #090979;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 1) 2%,
+    rgba(2, 2, 27, 1) 4%,
+    rgba(0, 0, 0, 1) 96%,
+    rgba(9, 9, 121, 1) 98%
+  );
+  overflow: hidden;
+}
+
+/* Inicia efeito de pulsar no container */
+.container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+  background: #090979;
+  background: radial-gradient(
+    circle,
+    rgba(9, 9, 121, 1) 10%,
+    rgba(4, 4, 50, 1) 25%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Traz o @keyframes pulse para cá e faz a trnsição da animação */
+  z-index: 1;
+  animation: pulse 4s infinite alternate;
+}
+
+/* Efeito de pulsar no container */
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* itens da lista */
+.list {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Produto da lista */
+.item {
+  position: absolute;
+  /* Ou seja, 0 em todas posições. Como se fosse bottom: 0; left: 0, right:0, top:0 */
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+/* Controla qual irá aparecer */
+.active {
+  opacity: 1;
+}
+
+/*  */
+.product-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+/* Imagem do produto */
+.product-img img {
+  max-width: 80%;
+  max-height: 60%;
+  filter: drop-shadow(0px 0px 30px #ffe600);
 }
