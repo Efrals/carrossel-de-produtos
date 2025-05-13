@@ -4,7 +4,7 @@ Este projeto é um carrossel de produtos com layout moderno, efeitos animados e 
 
 ## 📷 Preview
 
-<img src="assets/images/PreviewCarrosselDeProdutos.gif" alt="Preview Carrossel De Produtos" width="800"/>
+<img src="assets/images/PreviewCarrosselDeProdutos.gif" alt="Preview Carrossel De Produtos" width="910"/>
 
 ## 🚀 Funcionalidades
 
@@ -17,11 +17,12 @@ Este projeto é um carrossel de produtos com layout moderno, efeitos animados e 
 
 ## 🛠️ Tecnologias utilizadas
 
-**HTML5** para marcação semântica.
-
+- **HTML5** para marcação semântica.
 - **CSS3** com animações, gradientes e responsividade.
 - **JavaScript Vanilla** para controlar o carrossel.
-- - **Google Fonts** — tipografia com a fonte _Plus Jakarta Sans_.
+- **Bootstrap Icons** em botões.
+- **Google Fonts** — tipografia com a fonte _Comfortaa_.
+- **Google Fonts** — tipografia com a fonte _Plus Jakarta Sans_.
 
 ## ▶️ Como Usar
 
