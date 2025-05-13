@@ -28,7 +28,7 @@ header {
 
 /* Logo cabeçalho */
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 1000;
   color: #ffffff;
   text-shadow: #ffe600 0px 0px 10px;
@@ -42,7 +42,7 @@ header nav ul {
 
 /* Personalização adicional para itens Início, Produtos e Contato */
 header nav ul li {
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   /* A posição é relacionada aos itens do cabe */
   position: relative;
@@ -99,7 +99,7 @@ header nav ul li:hover::after {
   left: 50%;
   transform: translate(-50%, -50%);
   /* Traz o @keyframes pulse para cá e faz a trnsição da animação */
-  z-index: 1;
+  z-index: 0;
   animation: pulse 4s infinite alternate;
 }
 
@@ -132,11 +132,18 @@ header nav ul li:hover::after {
   justify-content: center;
   align-items: center;
   opacity: 0;
+
+  /* Animação */
+  transform: translateX(100vw);
+  transition: all 0.7s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 /* Controla qual irá aparecer */
 .active {
   opacity: 1;
+
+  /* Animação */
+  transform: translateX(0);
 }
 
 /* Container da imagem do produto */
@@ -155,6 +162,18 @@ header nav ul li:hover::after {
   max-width: 80%;
   max-height: 60%;
   filter: drop-shadow(0px 0px 30px #ffe600);
+
+  /* Animação */
+  transform: translateX(400px);
+  opacity: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+/* Animação */
+.active .product-img img {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Descrições dos produtos */
@@ -170,29 +189,41 @@ header nav ul li:hover::after {
 
 /* Informaões adicionais sobre marketing */
 .tag {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ffe600;
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   letter-spacing: 2px;
 }
 
 /* Informaões sobre título do produto */
 .name {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  /* Animação */
+  transform: translateX(400px);
+  opacity: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+/* Animação */
+.active .name {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Informaões sobre descrição do produto */
 .description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ffffff;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1.6;
 }
 
@@ -201,10 +232,10 @@ header nav ul li:hover::after {
   background-color: #000000;
   background-color: #ffe600;
   color: #000000;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border-radius: 50px;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -215,6 +246,83 @@ header nav ul li:hover::after {
 /* Efeito de hover no botão saiba mais */
 .button-learn-more:hover {
   background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0px 0px 20px #ffe600;
+}
+
+/* Configurações dos botões de setas */
+.arrows {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  padding-inline: 25px;
+}
+
+/* Botões de setas */
+.arrow-button {
+  cursor: pointer;
+  color: #ffe600;
+  background-color: rgba(133, 23, 23, 0);
+  border: none;
+  border-radius: 10px;
+}
+
+/* Efeito de hover no botão de setas */
+.arrow-button:hover {
+  color: #ffffff;
+  box-shadow: 0px 0px 20px #ffe600;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Configurações dos indicadores inferiores */
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 5;
+}
+
+/* Números dos indicadores inferiores */
+.numbers {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  color: #ffffffbb;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Configurações dos pontos de indicadores inferiores */
+.dots {
+  display: flex;
+  gap: 20px;
+}
+
+/* Pontos de indicadores inferiores */
+.dot {
+  width: 40px;
+  height: 4px;
+  background-color: #ffffffbb;
+  border-radius: 2px;
+}
+
+/* Efeito no ponto que está ativo dos indicadores inferiores */
+.dot.active {
+  background-color: #ffe600;
+  box-shadow: 0px 0px 10px #ffe600;
+}
+
+/* Efeito de hover nos pontos de indicadores inferiores */
+.dot.active:hover {
   color: #ffe600;
   box-shadow: 0px 0px 20px #ffe600;
 }
