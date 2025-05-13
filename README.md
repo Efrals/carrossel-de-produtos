@@ -1,1 +1,44 @@
-# carrossel-de-produtos
+# 🛍️ Carrossel de Produtos
+
+Este projeto é um carrossel de produtos com layout moderno, efeitos animados e navegação automática, ideal para ser usado em páginas de e-commerce ou portfólios de produtos.
+
+## 📷 Preview
+
+<img src="assets/images/PreviewCarrosselDeProdutos.gif" alt="Preview Carrossel De Produtos" width="800"/>
+
+## 🚀 Funcionalidades
+
+- Interface responsiva e moderna.
+- Animações suaves entre transições de produtos.
+- Navegação automática (autoplay a cada 5 segundos).
+- Navegação manual com botões de seta.
+- Indicador visual de posição (dots e contador numérico).
+- Efeitos visuais de pulso e sombra nos elementos
+
+## 🛠️ Tecnologias utilizadas
+
+**HTML5** para marcação semântica.
+
+- **CSS3** com animações, gradientes e responsividade.
+- **JavaScript Vanilla** para controlar o carrossel.
+- - **Google Fonts** — tipografia com a fonte _Plus Jakarta Sans_.
+
+## ▶️ Como Usar
+
+Entre no site: [Carrossel de Produtos](https://carrossel-de-produtos-efrals.netlify.app)
+
+OU
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd seu-repositorio
+   ```
+
+3. Abra o arquivo `index.html` em seu navegador.
