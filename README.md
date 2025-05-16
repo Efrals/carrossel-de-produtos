@@ -33,13 +33,7 @@ OU
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/Efrals/carrossel-de-produtos.git)
    ```
 
-2. Acesse a pasta do projeto:
-
-   ```bash
-   cd seu-repositorio
-   ```
-
-3. Abra o arquivo `index.html` em seu navegador.
+2. Acesse a pasta do projeto usando a extensão Live Server no VS Code (Não funciona somente abrindo o arquivo `index.html` no navegador).
